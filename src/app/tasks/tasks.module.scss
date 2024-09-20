@@ -1,0 +1,168 @@
+.tasks-container {
+    padding: 2rem;
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .title {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 1.5rem;
+        color: #0000008A;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border: 2px dashed #EAECF0;
+            background-color: #fff;
+            border-radius: 4px;
+            margin-bottom: 0.8rem;
+
+            &:hover {
+                background-color: #F7F9FD;
+                border: 1px solid #EAECF0;
+            }
+
+            span {
+                flex: 1;
+                margin-left: 0.8rem;
+            }
+
+            input[type="checkbox"] {
+                margin-right: 1rem;
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+
+                &:checked {
+                    accent-color: #53C0F0;
+                }
+            }
+
+            .completed {
+                text-decoration: line-through;
+                color: #999;
+            }
+
+            .delete-button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: #b3b3b3;
+                padding: 0;
+
+                &:hover {
+                    color: #242424;
+                }
+            }
+        }
+    }
+
+    .modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.80);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .modal-content {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width:  450px;
+            max-height: 286px;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1rem;
+
+                label {
+                    margin-bottom: 0.5rem;
+                }
+
+                input[type="text"] {
+                    padding: 0.5rem;
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                    width: 386px;
+                    height: 51px;
+                }
+            }
+        }
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    .button {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 185px;
+        height: 51px;
+        transition: background-color 0.3s;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .cancel-button {
+        background-color: #E7EEFB;
+        color: #000;
+
+
+    }
+
+    .add-button {
+        background: linear-gradient(90deg, #0796D3, #53C0F0);
+        color: white;
+    }
+
+    .delete-button {
+        background: linear-gradient(90deg, #D30707, #F05353);
+        color: white;
+    }
+    .delete-text {
+        color: hsla(0, 0%, 3%, 0.54);
+        font-size: 16px;
+        padding: 2rem 1rem;
+    }
+}
+
+.add-task {
+    text-align: center; // Centraliza o botão
+    margin-top: 1rem; // Espaço entre o contêiner e o botão
+
+    button {
+        background: linear-gradient(90deg, #0796D3, #53C0F0);
+        color: white;
+        border: none;
+        width: 450px; // Ajustar largura do botão
+        height: 51px; // Altura do botão
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s;
+        font-size: 16px;
+    }
+}

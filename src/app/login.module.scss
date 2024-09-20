@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+  
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    .input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      width: 300px;
+    }
+  
+    .button {
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+  
+    }
+  }
+  
