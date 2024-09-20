@@ -5,6 +5,11 @@
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #EAECF0;  
+
+    @media (max-width: 768px) {
+       width: 80%;
+    }
 
     .title {
         text-align: center;
@@ -58,7 +63,7 @@
                 border: none;
                 cursor: pointer;
                 color: #b3b3b3;
-                padding: 0;
+              
 
                 &:hover {
                     color: #242424;
@@ -73,18 +78,24 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.80);
         display: flex;
-        align-items: center;
         justify-content: center;
+        /* Centraliza horizontalmente */
+        align-items: center;
+        /* Centraliza verticalmente */
+        background-color: rgba(255, 255, 255, 0.8);
+        /* Fundo escuro transparente no desktop */
 
         .modal-content {
             background-color: #fff;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width:  450px;
-            max-height: 286px;
+            max-width: 450px;
+            width: 100%;
+            max-height: 500px;
+            overflow-y: auto;
+            text-align: center;
 
             form {
                 display: flex;
@@ -93,6 +104,8 @@
 
                 label {
                     margin-bottom: 0.5rem;
+                    text-align: left;
+                    font-size: 14px;
                 }
 
                 input[type="text"] {
@@ -101,36 +114,69 @@
                     border-radius: 8px;
                     font-size: 1rem;
                     margin-bottom: 1rem;
-                    width: 386px;
+                    width: 100%;
                     height: 51px;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            display: block; /* Para evitar o uso de flexbox no mobile */
+            padding-top: 0;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo claro no mobile */
+    
+            .modal-content {
+                text-align: start;
+                padding: 1rem;
+                max-width: 100%;
+                height: 100%; /* O modal agora ocupa a altura total da tela no mobile */
+                border-radius: 0;
+                box-shadow: none;
+                overflow-y: auto;
+                
+                label {
+                    padding-top: 1rem;
+                }
+                form {
+                    input[type="text"] {
+                        font-size: 1rem;
+                        height: 48px;
+                    }
                 }
             }
         }
     }
 
+
     .button-group {
         display: flex;
         justify-content: space-between;
         margin-top: 1rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 1rem;
+        }
     }
 
     .button {
         padding: 0.5rem 1rem;
         border: none;
-        border-radius: 4px;
+        border-radius: 8px;
         cursor: pointer;
         width: 185px;
         height: 51px;
         transition: background-color 0.3s;
-        border-radius: 8px;
         font-size: 16px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     .cancel-button {
         background-color: #E7EEFB;
         color: #000;
-
-
     }
 
     .add-button {
@@ -142,27 +188,55 @@
         background: linear-gradient(90deg, #D30707, #F05353);
         color: white;
     }
+
     .delete-text {
         color: hsla(0, 0%, 3%, 0.54);
         font-size: 16px;
         padding: 2rem 1rem;
     }
+
+    @media (max-width: 768px) {
+        padding: 2.5rem;
+        max-width: 100%;
+
+        .title {
+            font-size: 14px;
+        }
+
+        ul {
+            padding: 0 1rem;
+
+            li {
+                align-items: flex-start;
+            }
+        }
+
+        .modal-content {
+            padding: 1rem;
+            width: 90%;
+            height: auto;
+        }
+    }
 }
 
 .add-task {
-    text-align: center; // Centraliza o botão
-    margin-top: 1rem; // Espaço entre o contêiner e o botão
+    text-align: center;
+    margin-top: 1rem;
 
     button {
         background: linear-gradient(90deg, #0796D3, #53C0F0);
         color: white;
         border: none;
-        width: 450px; // Ajustar largura do botão
-        height: 51px; // Altura do botão
+        width: 450px;
+        height: 51px;
         border-radius: 8px;
         cursor: pointer;
         padding: 0.5rem 1rem;
         transition: background-color 0.3s;
         font-size: 16px;
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
     }
 }
